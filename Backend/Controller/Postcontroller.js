@@ -1,5 +1,5 @@
 import { Postmodel } from "../models/Postschema";
-
+import ErrorHandler from "../Error/Error";
 export const Postcontroller=async(req,res,next)=>{
     const {title,description,isCompleted,createdAt}=req.body;
     if(!title){
