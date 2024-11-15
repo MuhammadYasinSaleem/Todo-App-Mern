@@ -5,6 +5,7 @@ import { dbconnection } from "./database/dbconnection.js"
 import { ErrorMiddleware } from "./Error/Error.js"
 import postrouter from "./Routes/Posttodo.js"
 import Getrouter from "./Routes/Gettodo.js"
+import Delrouter from "./Routes/Deletetodo.js"
 const app=express()
 dotenv.config({path:'./config/config.env'})
 
@@ -17,6 +18,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use('/settodo',postrouter)
 app.use('/',Getrouter)
+app.use('/',Delrouter)
 dbconnection()
 app.use(ErrorMiddleware)
 export default app
