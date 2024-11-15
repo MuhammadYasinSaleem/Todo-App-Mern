@@ -1,20 +1,20 @@
-class ErrorHandler extends Error{
-    constructor(message,statuscode)
-    {
+class ErrorHandler extends Error {
+    constructor(message, statusCode) {
         super(message);
-        this.statuscode=statuscode;
+        this.statusCode = statusCode;
+        Error.captureStackTrace(this, this.constructor);
     }
 }
 
-const ErrorMiddleware=(err,req,res,next)=>{
-    err.message=err.message || "internal server arror";
-    err.statuscode=err.statuscode|| 500;
-    return res.status(err.statuscode).json({
-        success:false,
-        message:err.message
+export default ErrorHandler;
 
-    })
 
-}
+export const ErrorMiddleware = (err, req, res, next) => {
+    const statusCode = err.statusCode || 500;
+    const message = err.message || "Internal Server Error";
 
-export default ErrorHandler
+    return res.status(statusCode).json({
+        success: false,
+        message: message,
+    });
+};

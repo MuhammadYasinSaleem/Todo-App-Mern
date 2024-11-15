@@ -2,6 +2,7 @@ import express from "express"
 import cors from "cors"
 import dotenv from "dotenv"
 import { dbconnection } from "./database/dbconnection.js"
+import { ErrorMiddleware } from "./Error/Error.js"
 import postrouter from "./Routes/Posttodo.js"
 
 const app=express()
@@ -13,8 +14,9 @@ methods:["POST"],
 credentials:true
 }))
 app.use(express.json())
-app.use(express.urlencoded({encoded:true}))
+app.use(express.urlencoded({extended:true}))
 app.use('/settodo',postrouter)
 dbconnection()
+app.use(ErrorMiddleware)
 export default app
 
