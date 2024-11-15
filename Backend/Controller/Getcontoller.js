@@ -2,7 +2,7 @@ import { Postmodel } from "../models/Postschema.js";
 
 export const Getcontroller=async(req,res)=>{
     try{
-        const todos=Postmodel.find();
+        const todos=await Postmodel.find();
         res.status(200).json(todos);
     }
     catch(err){
