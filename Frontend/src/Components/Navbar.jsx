@@ -8,9 +8,12 @@ const Navbar = () => {
         <img src={logo} alt="todo" style={{ height: "200px" }} />
       </div>
       <div className="navlinks">
-        <Link to="herosection" className="link">Home</Link>
-        <Link to="About Us" className="link">About Us</Link>
-        <Link to="Task Manager" className="link">Task Manager</Link>
+        <Link to="herosection" className="link" smooth={true}
+                duration={500}>Home</Link>
+        <Link to="About Us" className="link" smooth={true}
+                duration={500}>About Us</Link>
+        <Link to="Task Manager" className="link" smooth={true}
+                duration={500}>Task Manager</Link>
       </div>
     </nav>
   );

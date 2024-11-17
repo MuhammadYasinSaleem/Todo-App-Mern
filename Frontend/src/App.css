@@ -1,7 +1,10 @@
+body{
+  margin: 0;
+  padding: 0;
+}
 .navbar{
   display: flex;
   padding: 20px;
-  border-bottom: 5px solid rgb(100, 80, 80);
 }
 .navbar .logo{
   flex:1;
@@ -19,4 +22,34 @@ padding: 50px 10px 20px 10px;
 .link:hover{
 color: rgb(100, 80, 80);
 cursor: pointer;
+}
+
+.herosection{
+  height: 80vh;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(12,103,174,1) 45%, rgba(0,212,255,1) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.herosection .herodiv{
+  text-align: center;
+}
+.aboutusdiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aboutusdiv p{
+  font-size: 100px;
+} 
+
+.aboutus-description{
+  display: flex;
+  justify-content: space-between;
+}
+.aboutus-description div p{
+  padding: 100px 20px;
+  font-size: 40px;
+  line-height: 2;
 }
