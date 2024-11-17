@@ -18,6 +18,6 @@ const Postschema=new mongoose.Schema({
         type: Date,
         default: Date.now,
     }
-})
+}, { timestamps: true });
 
 export const Postmodel=mongoose.model("Postmodel",Postschema)

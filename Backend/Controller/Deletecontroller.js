@@ -1,4 +1,4 @@
-import { Postmodel } from "../models/Postschema";
+import { Postmodel } from "../models/Postschema.js";
 
 export const Deletecontroller=async(req,res)=>{
     try{
