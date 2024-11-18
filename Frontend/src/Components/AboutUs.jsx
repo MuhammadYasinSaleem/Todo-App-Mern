@@ -3,9 +3,9 @@ import { TfiClipboard } from "react-icons/tfi";
 import heroimg from "../assets/heroimg.jpg";
 const AboutUs = () => {
   return (
-    <section className="About Us">
+    <section className="About Us" style={{marginTop:"50px"}}>
       <div className="aboutusdiv">
-        <TfiClipboard size={70} />
+        <TfiClipboard size={50} />
         <p>
           Track Your <spam style={{ color: "rgb(100, 80, 80)" }}>Schedule</spam>
         </p>
@@ -25,7 +25,7 @@ const AboutUs = () => {
           </p>
         </div>
         <div>
-          <img src={heroimg} alt="hero image" />
+          <img src={heroimg} alt="hero image" width="100%"/>
         </div>
       </div>
     </section>

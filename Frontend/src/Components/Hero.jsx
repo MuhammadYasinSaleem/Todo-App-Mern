@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section className="herosection">
       <div className="herodiv">
-        <Marquee speed={80} gradient={false} style={{ fontSize: "100px", fontWeight: "bold" }}>
+        <Marquee speed={80} gradient={false} style={{ fontSize: "50px", fontWeight: "bold" }}>
           Manage Your Everyday Tasks with us
         </Marquee>
       </div>
