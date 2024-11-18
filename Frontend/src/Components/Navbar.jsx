@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../assets/gtodo-todo-list-icon.png";
 import { Link } from "react-scroll";
+import { GiHamburgerMenu } from "react-icons/gi";
 const Navbar = () => {
   return (
     <nav className="navbar">
@@ -14,6 +15,9 @@ const Navbar = () => {
                 duration={500}>About Us</Link>
         <Link to="Task-Manager" className="link" smooth={true}
                 duration={500}>Task Manager</Link>
+      </div>
+      <div className="Menu">
+        <GiHamburgerMenu/>
       </div>
     </nav>
   );

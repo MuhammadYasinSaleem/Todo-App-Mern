@@ -17,6 +17,13 @@ display: flex;
 justify-content: space-around;
 padding: 20px;
 }
+.navbar .Menu{
+  flex: 1;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 50px;
+  cursor: pointer;
+}
 .link{
   font-size: 30px;
 }
@@ -27,7 +34,7 @@ cursor: pointer;
 
 .herosection {
   height: 500px;
-  max-width: 100vw; /* Prevents horizontal overflow */
+  max-width: 100vw; 
   background: rgb(2, 0, 36);
   background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(12, 103, 174, 1) 45%, rgba(0, 212, 255, 1) 100%);
   display: flex;
@@ -66,4 +73,39 @@ cursor: pointer;
 }
 .createtodo{
  text-align: center;
+}
+
+.Todoform{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.Todoform form{
+  width: 100%;
+  max-width: 1000px;
+  padding: 20px;
+}
+.Todoform input[type="text"]{
+  width: 100%;
+  max-width: 600px;
+  border-radius: 5px;
+  font-size: 30px;
+  border: 1px solid #646363;
+  margin-right: 10px;
+}
+.Todoform label{
+  font-size: 20px;
+}
+.addtask{
+  width: 100%;
+  max-width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+.addtask:hover{
+  background-color: #0056b3;
 }
