@@ -26,7 +26,6 @@ const TaskManager = () => {
       setdescription("");
       settitle("");
       setdone(false);
-      // Refetch todos after adding
       fetchtodos();
     } catch (error) {
       console.log(error.response?.data?.message || "Error occurred");
@@ -40,7 +39,6 @@ const TaskManager = () => {
   const fetchtodos = async () => {
     try {
       const { data } = await axios.get("http://localhost:4000/");
-      console.log(data); // Debugging response
       settodos(data); // Set todos from response
     } catch (error) {
       toast.error(error.response?.data?.message || "Error fetching todos");
@@ -52,6 +50,16 @@ const TaskManager = () => {
     fetchtodos();
   }, []);
 
+  const handledel=async(id)=>{
+    try{
+      const {data}=await axios.delete(`http://localhost:4000/todo/${id}`)
+      toast.success(data.message || "Todo deleted successfully");
+      fetchtodos()
+    }catch(error){
+      toast.error(error.response?.data?.message || "An error occurred");
+    }
+    
+  }
   return (
     <div className="Task-Manager">
       <div className="createtodo">
@@ -100,13 +108,13 @@ const TaskManager = () => {
               <p className="description">{todo.description? todo.description:"No description available"}</p>
               <p className="done">{todo.isCompleted ? "Yes" : "No"}</p>
               <div className="btn">
-              <button className="del">Delete</button>
+              <button className="del" onClick={()=>handledel(todo._id)}>Delete</button>
               <button className="update">Update</button>
               </div>
             </div>
           ))
         ) : (
-          <p style={{fontSize:"20px"}}>No tasks available.</p>
+          <p style={{fontSize:"20px",textAlign:"center",color:"red"}}>No tasks available.</p>
         )}
         <Toaster />
       </div>
