@@ -60,6 +60,29 @@ const TaskManager = () => {
     }
     
   }
+
+  const handleupdate=async(id)=>{
+    const todotoupdate=todos.find((todo)=>todo._id===id)
+    const updatetitle=prompt("Update title",todotoupdate.title)
+    const updatedescription=prompt("Update Description",todotoupdate.description)
+    const updateiscompleted=confirm("Mark as Completed? Ok for Yes Cancel for No")
+    if(updatetitle===null)
+    {
+      toast.error("Update cancelled")
+      return;
+    }
+    try{
+      const {data}=await axios.put(`http://localhost:4000/todo/${id}`,{
+        title:updatetitle,
+        description:updatedescription,
+        isCompleted:updateiscompleted
+      })
+      toast.success(data.message)
+        fetchtodos()
+    }catch(error){
+        toast.error(error.response.data.message)
+    }
+  }
   return (
     <div className="Task-Manager">
       <div className="createtodo">
@@ -109,7 +132,7 @@ const TaskManager = () => {
               <p className="done">{todo.isCompleted ? "Yes" : "No"}</p>
               <div className="btn">
               <button className="del" onClick={()=>handledel(todo._id)}>Delete</button>
-              <button className="update">Update</button>
+              <button className="update" onClick={()=>handleupdate(todo._id)}>Update</button>
               </div>
             </div>
           ))
