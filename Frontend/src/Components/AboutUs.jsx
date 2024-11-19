@@ -7,7 +7,7 @@ const AboutUs = () => {
       <div className="aboutusdiv">
         <TfiClipboard size={50} />
         <p>
-          Track Your <spam style={{ color: "rgb(100, 80, 80)" }}>Schedule</spam>
+          Track Your <span style={{ color: "rgb(100, 80, 80)" }}>Schedule</span>
         </p>
       </div>
       <div className="aboutus-description">

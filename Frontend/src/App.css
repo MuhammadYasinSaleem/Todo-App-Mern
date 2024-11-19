@@ -109,3 +109,71 @@ cursor: pointer;
 .addtask:hover{
   background-color: #0056b3;
 }
+
+.todo {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; 
+}
+
+.getdata .title {
+  /* width: 200px; */
+  flex: 1;
+  text-align: center; 
+}
+
+.getdata .description {
+  /* width: 600px; */
+  flex: 2;
+  text-align: center; 
+}
+
+.getdata .done {
+  /* width: 200px; */
+  flex: 1;
+  text-align: center; 
+}
+.getdata .title,
+.getdata .description{
+  overflow-x: scroll;
+}
+.getdata .title,
+.getdata .description,
+.getdata .done {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 20px;
+}
+.btn{
+flex: 1;
+
+}
+.del,.update{
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin: 5px; 
+}
+.del{
+  background-color: #dc3545; 
+  color: white;
+}
+.del:hover{
+  background-color: #b02a37; 
+  transform: scale(1.05); 
+}
+.update{
+  background-color: #ffc107; 
+  color: black;
+}
+.update:hover{
+  background-color: #e0a800; 
+  transform: scale(1.05);
+}
