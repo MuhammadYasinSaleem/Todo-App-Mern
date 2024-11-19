@@ -177,3 +177,23 @@ flex: 1;
   background-color: #e0a800; 
   transform: scale(1.05);
 }
+
+.footer{
+  margin: 50px 20px 20px 20px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+position: relative;
+}
+.footer img{
+padding-left: 110px;
+}
+.footer::before{
+  content: "";
+  position: absolute;
+  height: 0.6px;
+  top: 0; /* Position the line at the top of the footer */
+  left: 0;
+  width: 100%;
+  background: #212020; /* Color of the line */
+}

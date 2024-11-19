@@ -3,6 +3,7 @@ import Navbar from './Components/Navbar'
 import Hero from './Components/Hero'
 import AboutUs from './Components/AboutUs'
 import Taskmanager from './Components/Taskmanager'
+import Footer from './Components/Footer'
 function App() {
   
   return (
@@ -11,6 +12,7 @@ function App() {
     <Hero/>
     <AboutUs/>
     <Taskmanager/>
+    <Footer/>
     </>
   )
 }
