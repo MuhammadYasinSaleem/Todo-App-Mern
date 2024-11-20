@@ -4,10 +4,13 @@
   box-sizing: border-box;
   /* overflow-x: hidden; */
 }
+
 .navbar{
   display: flex;
   padding: 20px;
   position: relative;
+  /* overflow: hidden; */
+
 }
 .navbar .logo{
   flex:1;
@@ -47,14 +50,12 @@ cursor: pointer;
     position: absolute;
     flex:2;
     flex-direction: column;
-    width: 100%;
     justify-content: center;
     align-items: center;
     padding: 10px 0px;
     z-index: -1;
     top: -100%;
     visibility: hidden;
-    box-sizing: border-box;
     }
     .showmenu{
       position: absolute;
@@ -63,13 +64,13 @@ cursor: pointer;
       justify-content: center;
       align-items: center;
       top: 100px;
-      z-index: 1;
+      z-index: 10;
       background: #fff;
       width: 100%;
       left: 0;
       padding: 15px 7.5px;
       transition: 0.3s;
-      box-sizing: border-box;
+      overflow: hidden;
     }
 } 
 
@@ -81,7 +82,7 @@ cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-x: hidden; 
+  /* overflow-x: hidden;  */
 }
 
 .herosection .herodiv{
