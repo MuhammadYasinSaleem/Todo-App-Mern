@@ -158,6 +158,15 @@ cursor: pointer;
 .Todoform label{
   font-size: 20px;
 }
+@media (max-width:1100px){
+  .Todoform form{
+    display: flex;
+    flex-direction: column;
+  }
+  .Todoform input[type="text"]{
+    margin-bottom: 15px;
+  }
+}
 .addtask{
   width: 100%;
   max-width: 200px;
